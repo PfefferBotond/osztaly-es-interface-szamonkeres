@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Statue_1 = require("./Statue");
+const Statue_1 = require("./statue");
 let lista = [];
 document.addEventListener('DOMContentLoaded', () => {
     var _a;
@@ -17,25 +17,25 @@ document.addEventListener('DOMContentLoaded', () => {
         // ertekek:
         let joNev = joNevhez.test(document.getElementById('nev').value);
         let joEv = parseInt(document.getElementById('ev').value) <= 2022;
-        let joAr = parseInt(document.getElementById('ar').value) >= 1;
-        let joMagassag = parseInt(document.getElementById('magassag').value) > 10;
+        let joAr = parseInt(document.getElementById('ara').value) >= 1;
+        let joMagassag = parseInt(document.getElementById('Szmagassag').value) > 10;
         // ellenorzes:
         if (joNev && joEv && joAr && joMagassag) {
             // FelsoErtek adas:
             darabSzam++;
             osszesErtek += parseInt(document.getElementById('ar').value);
-            document.getElementById('darabSzam').textContent = darabSzam.toString();
+            document.getElementById('SzSzam').textContent = darabSzam.toString();
             document.getElementById('osszesAra').textContent = osszesErtek.toString();
             // Listához adás:
-            lista.push(new Statue_1.Statue(document.getElementById('nev').value, parseInt(document.getElementById('ev').value), parseInt(document.getElementById('ar').value), parseInt(document.getElementById('magassag').value)));
+            lista.push(new Statue_1.Statue(document.getElementById('nev').value, parseInt(document.getElementById('ev').value), parseInt(document.getElementById('ara').value), parseInt(document.getElementById('Szmagassag').value)));
             // Form urites:
             document.getElementById('nev').value = '';
             document.getElementById('ev').value = '';
-            document.getElementById('ar').value = '';
+            document.getElementById('ara').value = '';
             document.getElementById('magassag').value = '';
         }
         else if (!joNev) {
-            document.getElementById('rNev').textContent = 'Rossz nevet adott meg!(Csak angol ABC karaktereket, szőköz ill. vessző karaktereket tartalmazhat csak)';
+            document.getElementById('rNev').textContent = 'Nem megfelelő név!(Csak angol ABC karaktereket, szőköz illetve vessző karaktereket tartalmazhat)';
         }
         else if (!joEv) {
             document.getElementById('rEv').textContent = 'Rossz évjáratot adott meg!';
