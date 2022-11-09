@@ -95,5 +95,13 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PfefferBotond/osztaly-es-interface-szamonkeres.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PfefferBotond/osztaly-es-interface-szamonkeres/issues"
+  },
+  "homepage": "https://github.com/PfefferBotond/osztaly-es-interface-szamonkeres#readme",
   "description": ""
 }
